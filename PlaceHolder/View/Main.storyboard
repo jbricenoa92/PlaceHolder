@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zLB-MK-FLA">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Place Holder View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PlaceHolderViewController" customModule="PlaceHolder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Scg-Fs-Ki1" userLabel="header">
+                                <rect key="frame" x="0.0" y="103" width="393" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prueba de Ingreso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imo-yr-X6h">
+                                        <rect key="frame" x="10" y="18" width="163.66666666666666" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="ceibaBase"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0MG-IL-NUT"/>
+                                    <constraint firstItem="imo-yr-X6h" firstAttribute="leading" secondItem="Scg-Fs-Ki1" secondAttribute="leading" constant="10" id="6IC-JB-c4l"/>
+                                    <constraint firstItem="imo-yr-X6h" firstAttribute="centerY" secondItem="Scg-Fs-Ki1" secondAttribute="centerY" id="td9-P1-xGe"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NaW-zI-yxf">
+                                <rect key="frame" x="10" y="234" width="373" height="618"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buscar usuario" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxl-4U-imF">
+                                <rect key="frame" x="10" y="168" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="ceibaBase"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="12y-07-0ll">
+                                <rect key="frame" x="0.0" y="190" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="smi-iz-VuW"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="12y-07-0ll" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="236-So-CE9"/>
+                            <constraint firstItem="Dxl-4U-imF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="6hC-6k-uAd"/>
+                            <constraint firstItem="Scg-Fs-Ki1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8id-ZD-x7E"/>
+                            <constraint firstItem="NaW-zI-yxf" firstAttribute="top" secondItem="Dxl-4U-imF" secondAttribute="bottom" constant="45" id="BH2-Pc-ypL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaW-zI-yxf" secondAttribute="trailing" constant="10" id="D0V-H3-jVa"/>
+                            <constraint firstItem="Dxl-4U-imF" firstAttribute="top" secondItem="Scg-Fs-Ki1" secondAttribute="bottom" constant="5" id="ETx-0j-Tgq"/>
+                            <constraint firstItem="12y-07-0ll" firstAttribute="top" secondItem="Dxl-4U-imF" secondAttribute="bottom" constant="1" id="EcN-cG-n2X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Scg-Fs-Ki1" secondAttribute="trailing" id="Foa-Z9-G1Q"/>
+                            <constraint firstAttribute="bottom" secondItem="NaW-zI-yxf" secondAttribute="bottom" id="J8m-KH-Rtb"/>
+                            <constraint firstItem="NaW-zI-yxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="LsI-8e-69f"/>
+                            <constraint firstItem="Scg-Fs-Ki1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bwR-ZF-VMZ"/>
+                            <constraint firstItem="Scg-Fs-Ki1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jPw-Ti-YcZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dxl-4U-imF" secondAttribute="trailing" constant="10" id="rV5-17-FBC"/>
+                            <constraint firstItem="12y-07-0ll" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xBt-fl-r1n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="doL-xK-NvQ"/>
+                    <connections>
+                        <outlet property="searchBar" destination="12y-07-0ll" id="itR-pO-2sg"/>
+                        <outlet property="tableView" destination="NaW-zI-yxf" id="WvU-o8-6sX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.24427480916029" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pxh-ZU-XRX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zLB-MK-FLA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="lnz-Yw-mXH">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="p9A-Oy-7Ap"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekf-Ha-NNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.473282442748086" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="ceibaBase">
+            <color red="0.20600000023841858" green="0.3580000102519989" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

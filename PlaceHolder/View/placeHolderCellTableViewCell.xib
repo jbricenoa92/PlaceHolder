@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="placeHolderCellTableViewCell" rowHeight="93" id="KGk-i7-Jjw" customClass="placeHolderCellTableViewCell" customModule="PlaceHolder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="93"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMv-ES-I1K">
+                        <rect key="frame" x="10" y="5" width="93.333333333333329" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="vFe-bj-L0L"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" name="ceibaBase"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UaW-bl-53L">
+                        <rect key="frame" x="5" y="31.666666666666668" width="15" height="12.333333333333325"/>
+                        <color key="tintColor" name="ceibaBase"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="4gO-Ov-SlV"/>
+                            <constraint firstAttribute="width" constant="15" id="hjG-P0-ZIN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpe-Ma-Lp0">
+                        <rect key="frame" x="25" y="30" width="200" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="Jgp-sO-yYJ"/>
+                            <constraint firstAttribute="height" constant="15" id="oJT-2u-6g3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4Sp-XA-jyM">
+                        <rect key="frame" x="5" y="52.333333333333329" width="15" height="11"/>
+                        <color key="tintColor" name="ceibaBase"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="QgB-Ca-KNQ"/>
+                            <constraint firstAttribute="width" constant="15" id="RR6-1w-hHm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userMail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3g-vN-n2K">
+                        <rect key="frame" x="25" y="50" width="200" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="I47-8R-9oo"/>
+                            <constraint firstAttribute="width" constant="200" id="jp4-9d-9rB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rel-hK-6wJ">
+                        <rect key="frame" x="146" y="50.666666666666657" width="189" height="34.333333333333343"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="VER PUBLICACIONES">
+                            <color key="baseForegroundColor" name="ceibaBase"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="toggleExpansion" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XOl-7S-g6D"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Rel-hK-6wJ" secondAttribute="bottom" constant="8" id="1eN-WE-4PA"/>
+                    <constraint firstItem="x3g-vN-n2K" firstAttribute="leading" secondItem="4Sp-XA-jyM" secondAttribute="trailing" constant="5" id="6gc-5t-akp"/>
+                    <constraint firstAttribute="trailing" secondItem="Rel-hK-6wJ" secondAttribute="trailing" constant="5" id="8q1-ww-Jce"/>
+                    <constraint firstItem="Rpe-Ma-Lp0" firstAttribute="top" secondItem="yMv-ES-I1K" secondAttribute="bottom" constant="5" id="C4U-FY-J7s"/>
+                    <constraint firstItem="UaW-bl-53L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="ILr-Ze-tnK"/>
+                    <constraint firstItem="Rpe-Ma-Lp0" firstAttribute="leading" secondItem="UaW-bl-53L" secondAttribute="trailing" constant="5" id="Lg6-20-Cwd"/>
+                    <constraint firstItem="yMv-ES-I1K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="VKy-QD-Y1Y"/>
+                    <constraint firstItem="x3g-vN-n2K" firstAttribute="top" secondItem="Rpe-Ma-Lp0" secondAttribute="bottom" constant="5" id="asE-pg-kF4"/>
+                    <constraint firstItem="UaW-bl-53L" firstAttribute="top" secondItem="yMv-ES-I1K" secondAttribute="bottom" constant="5" id="bZF-IM-LbN"/>
+                    <constraint firstItem="4Sp-XA-jyM" firstAttribute="top" secondItem="UaW-bl-53L" secondAttribute="bottom" constant="5" id="dec-7n-Fb9"/>
+                    <constraint firstItem="yMv-ES-I1K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ins-Ig-FYJ"/>
+                    <constraint firstItem="4Sp-XA-jyM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="lXE-bQ-Tle"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="BtnPublication" destination="Rel-hK-6wJ" id="LGM-Gb-IGa"/>
+                <outlet property="lblUserEmail" destination="x3g-vN-n2K" id="l3p-42-Wja"/>
+                <outlet property="lblUserName" destination="yMv-ES-I1K" id="MZA-hv-QXy"/>
+                <outlet property="lblUserPhone" destination="Rpe-Ma-Lp0" id="hum-kI-l7M"/>
+            </connections>
+            <point key="canvasLocation" x="-250.38167938931298" y="4.5774647887323949"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="envelope.fill" catalog="system" width="128" height="93"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="ceibaBase">
+            <color red="0.20600000023841858" green="0.3580000102519989" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
