@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlaceHolder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Scg-Fs-Ki1">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prueba de Ingreso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imo-yr-X6h">
+                                        <rect key="frame" x="10" y="13" width="163.66666666666666" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="ceibaBase"/>
+                                <constraints>
+                                    <constraint firstItem="imo-yr-X6h" firstAttribute="leading" secondItem="Scg-Fs-Ki1" secondAttribute="leading" constant="10" id="9GN-oE-6WA"/>
+                                    <constraint firstAttribute="height" constant="50" id="WPt-Zd-qYF"/>
+                                    <constraint firstItem="imo-yr-X6h" firstAttribute="centerY" secondItem="Scg-Fs-Ki1" secondAttribute="centerY" id="ta5-M1-h4T"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buscar usuario" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxl-4U-imF">
+                                <rect key="frame" x="10" y="119" width="373" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8BF-de-B9r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="ceibaBase"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="bottom" horizontalHuggingPriority="248" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qV1-QO-R73">
+                                <rect key="frame" x="10" y="145" width="373" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="uuc-su-4tc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NaW-zI-yxf">
+                                <rect key="frame" x="10" y="179" width="373" height="639"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NaW-zI-yxf" firstAttribute="top" secondItem="qV1-QO-R73" secondAttribute="bottom" id="A7L-dg-rEZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaW-zI-yxf" secondAttribute="trailing" constant="10" id="Imi-gc-50y"/>
+                            <constraint firstItem="Dxl-4U-imF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="NV9-mY-swU"/>
+                            <constraint firstItem="qV1-QO-R73" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="PBU-cW-wcu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qV1-QO-R73" secondAttribute="trailing" constant="10" id="U8A-nT-6jz"/>
+                            <constraint firstItem="Scg-Fs-Ki1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c7T-VU-uYp"/>
+                            <constraint firstItem="qV1-QO-R73" firstAttribute="top" secondItem="Dxl-4U-imF" secondAttribute="bottom" constant="5" id="eRg-qd-Yf6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NaW-zI-yxf" secondAttribute="bottom" id="nkH-Ji-Gwc"/>
+                            <constraint firstItem="Dxl-4U-imF" firstAttribute="top" secondItem="Scg-Fs-Ki1" secondAttribute="bottom" constant="10" id="tlV-0a-AOh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Scg-Fs-Ki1" secondAttribute="trailing" id="uc0-tm-KqZ"/>
+                            <constraint firstItem="Scg-Fs-Ki1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vgY-u6-2Jw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dxl-4U-imF" secondAttribute="trailing" constant="10" id="wTI-YQ-8hs"/>
+                            <constraint firstItem="NaW-zI-yxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yCZ-sV-JnH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchUser" destination="qV1-QO-R73" id="RTp-5Q-7ky"/>
+                        <outlet property="showUser" destination="NaW-zI-yxf" id="dTe-r4-INr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="ceibaBase">
+            <color red="0.2061764002" green="0.35788857940000002" blue="0.19954416159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
