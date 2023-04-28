@@ -68,9 +68,6 @@
                         <buttonConfiguration key="configuration" style="plain" title="VER PUBLICACIONES">
                             <color key="baseForegroundColor" name="ceibaBase"/>
                         </buttonConfiguration>
-                        <connections>
-                            <action selector="toggleExpansion" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XOl-7S-g6D"/>
-                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -90,7 +87,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="BtnPublication" destination="Rel-hK-6wJ" id="LGM-Gb-IGa"/>
                 <outlet property="lblUserEmail" destination="x3g-vN-n2K" id="l3p-42-Wja"/>
                 <outlet property="lblUserName" destination="yMv-ES-I1K" id="MZA-hv-QXy"/>
                 <outlet property="lblUserPhone" destination="Rpe-Ma-Lp0" id="hum-kI-l7M"/>

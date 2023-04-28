@@ -18,6 +18,8 @@ class placeHolderCellTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
     }
     
 
@@ -27,7 +29,7 @@ class placeHolderCellTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(users: User?, content: String){
+    func configure(users: User?){
      
         if let email = users?.email {
             self.lblUserEmail?.text = email

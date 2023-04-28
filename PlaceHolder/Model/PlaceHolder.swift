@@ -19,7 +19,21 @@ struct User: Codable {
     var company: Company?
     var index: Int?
     var isOpened: Bool? = false
-    var publication: [Publications]?
+    var posts: [Post]?
+    
+    init(id: Int?, name: String?, username: String?, email: String?, address: Address?, phone: String?, website: String?, company: Company?, index: Int?, isOpened: Bool?, posts: [Post] = []) {
+            self.id = id
+            self.name = name
+            self.username = username
+            self.email = email
+            self.address = address
+            self.phone = phone
+            self.website = website
+            self.company = company
+            self.index = index
+            self.isOpened = isOpened
+            self.posts = posts
+        }
 }
 
 struct Address: Codable {
@@ -41,19 +55,13 @@ struct Company: Codable {
     var bs: String?
 }
 
-struct Publications: Codable {
-    var userId: Int?
-    var id: Int?
-    var title: String?
-    var body: String?
-}
-
 struct Post: Codable {
     var userId: Int?
     var id: Int?
     var title: String?
     var body: String?
-    var isOpened: Bool? = false
+    var index: Int?
+ 
 }
 
  

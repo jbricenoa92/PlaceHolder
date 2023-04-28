@@ -17,6 +17,7 @@ class services {
         }        
         let task = URLSession.shared.dataTask(with: url) {[weak self] data, _, error in
             guard let data = data, error == nil else {
+                
                 return
             }
             do {
@@ -34,7 +35,7 @@ class services {
         task.resume()
     }
     
-    public func getPosts(completion: @escaping ([Publications]?, NSError?) -> Void){
+    public func getPosts(completion: @escaping ([Post]?, NSError?) -> Void){
         guard let url = URL(string: GlobalConstants.UrlServices.basePlaceHolder+GlobalConstants.UrlServices.postsPlaceHolder) else {
             return
         }
@@ -44,9 +45,9 @@ class services {
                 return
             }
             do {
-                let publications = try? JSONDecoder().decode([Publications].self, from: data)
-                if let publication = publications {
-                    completion(publication, nil)
+                let responsPosts = try? JSONDecoder().decode([Post].self, from: data)
+                if let post = responsPosts {
+                    completion(post, nil)
                     return
                 }
             }
@@ -57,19 +58,22 @@ class services {
         task.resume()
     }
     
-    public func getPostsById(id: String,completion: @escaping ([Publications]?, NSError?) -> Void){
-        guard let url = URL(string: GlobalConstants.UrlServices.basePlaceHolder+GlobalConstants.UrlServices.postsByIdPlaceHolder+id) else {
+    public func getPostsById(id: Int,completion: @escaping ([Post]?, NSError?) -> Void){
+       
+        guard let url = URL(string:"\(GlobalConstants.UrlServices.basePlaceHolder)\(GlobalConstants.UrlServices.postsByIdPlaceHolder)\(id)") else {
             return
         }
-        
         let task = URLSession.shared.dataTask(with: url) {[weak self] data, _, error in
+           
             guard let data = data, error == nil else {
+               
                 return
             }
             do {
-                let publications = try? JSONDecoder().decode([Publications].self, from: data)
-                if let publication = publications {
-                    completion(publication, nil)
+                let responsPosts = try? JSONDecoder().decode([Post].self, from: data)
+                
+                if let post = responsPosts {
+                    completion(post, nil)
                     return
                 }
             }

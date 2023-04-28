@@ -39,7 +39,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buscar usuario" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxl-4U-imF">
-                                <rect key="frame" x="10" y="168" width="373" height="21"/>
+                                <rect key="frame" x="10" y="168" width="113" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="pJR-ue-9Sb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="ceibaBase"/>
                                 <nil key="highlightedColor"/>
@@ -51,11 +54,18 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="smi-iz-VuW"/>
                                 </connections>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYP-n2-bev">
+                                <rect key="frame" x="323" y="168" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="12y-07-0ll" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="236-So-CE9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AYP-n2-bev" secondAttribute="trailing" constant="5" id="3Yr-hV-Pwx"/>
                             <constraint firstItem="Dxl-4U-imF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="6hC-6k-uAd"/>
                             <constraint firstItem="Scg-Fs-Ki1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8id-ZD-x7E"/>
                             <constraint firstItem="NaW-zI-yxf" firstAttribute="top" secondItem="Dxl-4U-imF" secondAttribute="bottom" constant="45" id="BH2-Pc-ypL"/>
@@ -66,20 +76,23 @@
                             <constraint firstAttribute="bottom" secondItem="NaW-zI-yxf" secondAttribute="bottom" id="J8m-KH-Rtb"/>
                             <constraint firstItem="NaW-zI-yxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="LsI-8e-69f"/>
                             <constraint firstItem="Scg-Fs-Ki1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bwR-ZF-VMZ"/>
+                            <constraint firstItem="AYP-n2-bev" firstAttribute="leading" secondItem="Dxl-4U-imF" secondAttribute="trailing" constant="200" id="fHm-dw-AuC"/>
                             <constraint firstItem="Scg-Fs-Ki1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jPw-Ti-YcZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dxl-4U-imF" secondAttribute="trailing" constant="10" id="rV5-17-FBC"/>
+                            <constraint firstItem="AYP-n2-bev" firstAttribute="top" secondItem="Scg-Fs-Ki1" secondAttribute="bottom" constant="5" id="s1z-Go-T8g"/>
                             <constraint firstItem="12y-07-0ll" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xBt-fl-r1n"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="doL-xK-NvQ"/>
                     <connections>
+                        <outlet property="empty" destination="AYP-n2-bev" id="V7B-Wo-clY"/>
                         <outlet property="searchBar" destination="12y-07-0ll" id="itR-pO-2sg"/>
                         <outlet property="tableView" destination="NaW-zI-yxf" id="WvU-o8-6sX"/>
+                        <segue destination="f7F-zF-bFW" kind="show" identifier="showPost" id="3oE-YV-Mvp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.24427480916029" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1754.9618320610687" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pxh-ZU-XRX">
@@ -92,12 +105,62 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="p9A-Oy-7Ap"/>
+                        <segue destination="EBa-Pn-WIW" kind="relationship" relationship="rootViewController" id="p9A-Oy-7Ap"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekf-Ha-NNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-98.473282442748086" y="3.5211267605633805"/>
+        </scene>
+        <!--PUBLICACIONES-->
+        <scene sceneID="dhR-dq-uMJ">
+            <objects>
+                <viewController id="f7F-zF-bFW" customClass="PotsViewController" customModule="PlaceHolder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V8k-1l-RDL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7aS-nO-eRU">
+                                <rect key="frame" x="10" y="103" width="373" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yRa-C2-mFw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yRa-C2-mFw" firstAttribute="trailing" secondItem="7aS-nO-eRU" secondAttribute="trailing" constant="10" id="QdW-E1-RfM"/>
+                            <constraint firstItem="yRa-C2-mFw" firstAttribute="bottom" secondItem="7aS-nO-eRU" secondAttribute="bottom" id="gPt-Xh-qEQ"/>
+                            <constraint firstItem="7aS-nO-eRU" firstAttribute="top" secondItem="yRa-C2-mFw" secondAttribute="top" id="rNN-eP-DXr"/>
+                            <constraint firstItem="7aS-nO-eRU" firstAttribute="leading" secondItem="yRa-C2-mFw" secondAttribute="leading" constant="10" id="vhc-VL-kge"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PUBLICACIONES" id="RXk-95-CIW"/>
+                    <connections>
+                        <outlet property="tableView" destination="7aS-nO-eRU" id="umf-X7-SIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRz-74-bfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2527.4809160305344" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Jt-SP-OAE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EBa-Pn-WIW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ubB-di-09J"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nwz-cr-7c7">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="52t-A6-6TP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ca9-ji-AgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.24427480916029" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
@@ -106,6 +169,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
